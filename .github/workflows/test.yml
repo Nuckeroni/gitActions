@@ -31,7 +31,7 @@ jobs:
       - name: deploy 
         run: echo "deploy"
   information:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: give info
-        run: echo "${{toJson(github)}}"
+        run: echo "${{ toJson(github) }}"
