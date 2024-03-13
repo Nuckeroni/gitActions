@@ -1,0 +1,10 @@
+    
+    
+name: Information
+on: workflow_dispatch
+jobs:
+    information:
+        runs-on: windows-latest
+        steps:
+            - name: give info
+              run: echo "${{ toJson(github) }}"
