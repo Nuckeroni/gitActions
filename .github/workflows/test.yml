@@ -1,5 +1,5 @@
 name: Test Project
-on: push
+on: [push, workflow_dispatch]
 jobs:
   test:
     runs-on: windows-latest
@@ -30,3 +30,8 @@ jobs:
         run: npm run build
       - name: deploy 
         run: echo "deploy"
+  information:
+    runs-on: windows-latest
+    steps:
+      - name: give info
+        run: echo "${{toJson(github)}}"
