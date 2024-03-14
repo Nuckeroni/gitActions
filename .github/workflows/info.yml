@@ -5,4 +5,9 @@ jobs:
         runs-on: windows-latest
         steps:
             - name: give info
-              run: echo "${{ github }}"
+              run: echo "${{ toJSON(github) }}"
+    information2:
+        runs-on: windows-latest
+        steps:
+            - name: give info pure
+              run: echo "${{ github}}"
